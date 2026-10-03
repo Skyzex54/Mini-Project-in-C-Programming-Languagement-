@@ -1,0 +1,24 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build GTK4 app",
+            "command": "C:\\msys64\\usr\\bin\\bash.exe",
+            "args": [
+               
+    "-lc",
+    "export PATH=/ucrt64/bin:$PATH; cd /c/Users/yahya/Desktop/bank && echo 'BUILD STARTED' && mkdir -p build && /ucrt64/bin/gcc -fdiagnostics-color=always -g src/*.c -Iinclude $(/ucrt64/bin/pkg-config --cflags --libs gtk4) -o build/Main.exe && echo 'BUILD SUCCESS'"
+
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build all sources with GTK4 flags from pkg-config."
+        },
+    ],
+    "version": "2.0.0"
+}
